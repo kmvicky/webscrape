@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block title %} Top Gainers {% endblock %}
+
+{% block content %}
+
+	<div class="ui segment">
+		<div class="page-header">
+			<h5>TOP GAINERS</h5>
+		</div>
+
+		<div class="ui hidden divider"></div>
+
+		<div class="lists">
+			{% include 'application/lists.html' %}
+		</div>
+
+	</div>
+
+{% endblock %}

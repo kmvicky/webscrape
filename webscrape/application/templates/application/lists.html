@@ -1,0 +1,47 @@
+<div class="ui four cards">
+	
+	{% for item in data %}
+	
+		<div class="ui card">
+			<div class="content">
+				<div class="header">
+					{{item.symbol}}
+				</div>
+
+				<h5 class="right-floated">
+					Change: {{item.netPrice}}
+				</h5>
+			</div>
+	
+			<div class="content">
+				<h4 class="ui header">Overview</h4>
+				<div class="ui small feed">
+					<div class="event">
+						<div class="content">
+							<div class="summary">
+								<span class="first-val">Lowest Point<a>{{item.lowPrice}} </a><span>
+
+								<span class="second-val">
+									Hightest Point <a>{{item.highPrice}} </a>
+								</span>
+							</div>
+						</div>
+					</div>
+					<div class="event">
+						<div class="content">
+							<div class="summary">
+								<span class="first-val">Trade Qty<a>{{item.tradedQuantity}} </a><span>
+
+								<span class="second-val">
+									Turnover(In Lakhs) <a>{{item.turnoverInLakhs}} </a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	{% endfor %}
+
+</div>
